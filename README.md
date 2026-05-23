@@ -38,15 +38,15 @@ git_user_name: "Your Work Name"
 
 ## What's managed
 
-| Role | What it does |
-|---|---|
-| `homebrew` | Installs all tools from Brewfile |
-| `zsh` | oh-my-zsh, powerlevel10k, plugins, nvm |
-| `tmux` | Config + TPM plugins |
-| `nvim` | Full neovim config via symlink |
-| `ghostty` | Terminal config |
-| `git` | .gitconfig (templated), .gitignore_global |
-| `ssh` | ~/.ssh/config only — keys managed separately |
+| Role | What it does | Docs |
+|---|---|---|
+| `homebrew` | Installs all tools from Brewfile | — |
+| `zsh` | oh-my-zsh, powerlevel10k, plugins, nvm | [docs/zsh.md](docs/zsh.md) |
+| `tmux` | Config + TPM plugins | [docs/tmux.md](docs/tmux.md) |
+| `nvim` | Full neovim config via symlink | [docs/nvim.md](docs/nvim.md) |
+| `ghostty` | Terminal config | [docs/ghostty.md](docs/ghostty.md) |
+| `git` | .gitconfig (templated), .gitignore_global | — |
+| `ssh` | ~/.ssh/config only — keys managed separately | — |
 
 ## SSH Keys
 
