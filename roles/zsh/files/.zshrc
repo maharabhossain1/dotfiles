@@ -130,6 +130,11 @@ extract() {
   fi
 }
 
+# ---- GO ----
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOBIN:/opt/homebrew/opt/go/bin:$PATH"
+
 # ---- POWERLEVEL10K ----
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

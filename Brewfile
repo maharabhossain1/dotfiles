@@ -1,5 +1,6 @@
 tap "nikitabobko/tap"
 brew "fd"
+brew "go"
 brew "ffmpeg"
 brew "fzf"
 brew "git-flow"

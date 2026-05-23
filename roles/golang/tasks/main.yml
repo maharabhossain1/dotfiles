@@ -1,0 +1,17 @@
+---
+- name: Ensure Go is installed via Homebrew
+  community.general.homebrew:
+    name: go
+    state: present
+    path: /opt/homebrew/bin
+
+- name: Create Go workspace directories
+  file:
+    path: "{{ ansible_facts['env']['HOME'] }}/{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - go
+    - go/bin
+    - go/src
+    - go/pkg
