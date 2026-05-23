@@ -9,7 +9,7 @@ Ansible-managed dotfiles for macOS and Linux.
 xcode-select --install
 
 # 2. Run bootstrap (handles everything else)
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/dotfiles/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/maharabhossain1/dotfiles/main/bootstrap.sh | bash
 ```
 
 ## Existing machine — pull and apply updates

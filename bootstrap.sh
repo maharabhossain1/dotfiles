@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES_REPO="https://github.com/YOUR_USERNAME/dotfiles.git"
+DOTFILES_REPO="https://github.com/maharabhossain1/dotfiles.git"
 DOTFILES_DIR="$HOME/.dotfiles"
 
 echo "==> Starting dotfiles bootstrap"
