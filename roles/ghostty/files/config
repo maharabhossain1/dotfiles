@@ -39,6 +39,7 @@ quit-after-last-window-closed = false
 
 # ---- Keybinds ----
 keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = cmd+l=text:clear\n
 keybind = cmd+n=new_window
 keybind = cmd+t=new_tab
 keybind = cmd+w=close_surface
