@@ -1,24 +1,24 @@
 ---
 - name: Create ~/.ssh directory
   file:
-    path: "{{ ansible_env.HOME }}/.ssh"
+    path: "{{ ansible_facts["env"]["HOME"] }}/.ssh"
     state: directory
     mode: '0700'
 
 - name: Create ssh sockets directory
   file:
-    path: "{{ ansible_env.HOME }}/.ssh/sockets"
+    path: "{{ ansible_facts["env"]["HOME"] }}/.ssh/sockets"
     state: directory
     mode: '0700'
 
 - name: Symlink SSH config
   file:
     src: "{{ dotfiles_dir }}/roles/ssh/files/config"
-    dest: "{{ ansible_env.HOME }}/.ssh/config"
+    dest: "{{ ansible_facts["env"]["HOME"] }}/.ssh/config"
     state: link
     force: yes
 
 - name: Set correct permissions on SSH config
   file:
-    path: "{{ ansible_env.HOME }}/.ssh/config"
+    path: "{{ ansible_facts["env"]["HOME"] }}/.ssh/config"
     mode: '0600'

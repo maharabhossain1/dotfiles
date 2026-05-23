@@ -2,16 +2,16 @@
 - name: Install TPM (Tmux Plugin Manager)
   git:
     repo: https://github.com/tmux-plugins/tpm.git
-    dest: "{{ ansible_env.HOME }}/.tmux/plugins/tpm"
+    dest: "{{ ansible_facts["env"]["HOME"] }}/.tmux/plugins/tpm"
     update: yes
 
 - name: Symlink .tmux.conf
   file:
     src: "{{ dotfiles_dir }}/roles/tmux/files/.tmux.conf"
-    dest: "{{ ansible_env.HOME }}/.tmux.conf"
+    dest: "{{ ansible_facts["env"]["HOME"] }}/.tmux.conf"
     state: link
     force: yes
 
 - name: Install tmux plugins via TPM
-  shell: "{{ ansible_env.HOME }}/.tmux/plugins/tpm/bin/install_plugins"
+  shell: "{{ ansible_facts["env"]["HOME"] }}/.tmux/plugins/tpm/bin/install_plugins"
   changed_when: false

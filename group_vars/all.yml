@@ -1,7 +1,7 @@
 ---
 # Shared across all machines — override in host_vars/<hostname>.yml
 
-dotfiles_dir: "{{ ansible_env.HOME }}/.dotfiles"
+dotfiles_dir: "{{ ansible_facts['env']['HOME'] }}/.dotfiles"
 
 git_user_name: "Maharab Hossain Opi"
 git_user_email: "maharabhossain0022@gmail.com"

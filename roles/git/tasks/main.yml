@@ -2,10 +2,10 @@
 - name: Deploy .gitconfig from template
   template:
     src: .gitconfig.j2
-    dest: "{{ ansible_env.HOME }}/.gitconfig"
+    dest: "{{ ansible_facts["env"]["HOME"] }}/.gitconfig"
     backup: yes
 
 - name: Deploy .gitignore_global
   copy:
     src: .gitignore_global
-    dest: "{{ ansible_env.HOME }}/.gitignore_global"
+    dest: "{{ ansible_facts["env"]["HOME"] }}/.gitignore_global"
