@@ -1,8 +1,8 @@
 # tmux
 
-Theme: Catppuccin Mocha. Prefix: `Ctrl+Space` (not the default `Ctrl+b`).
+Theme: Catppuccin Mocha. Prefix: `Ctrl+B`.
 
-All keybinds below need the prefix first unless stated otherwise.
+All keybinds below need the prefix first unless stated otherwise. `Ctrl+B` is the tmux default — easy to reach with index + middle finger.
 
 ---
 
