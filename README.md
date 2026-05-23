@@ -5,10 +5,26 @@ Ansible-managed dotfiles for macOS and Linux.
 ## Fresh machine setup
 
 ```bash
-# 1. macOS only — install Xcode CLT first (skip on Linux)
+# 1. macOS only — install Xcode CLT (skip on Linux)
+#    A popup will appear — click "Install", wait ~2 min
 xcode-select --install
 
-# 2. Run bootstrap (handles everything else)
+# Verify it finished
+git --version  # should print a version number
+
+# 2. Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 3. Add Homebrew to PATH (run both lines — Homebrew will remind you at the end too)
+#    Line 1: permanent fix — adds brew to PATH on every terminal launch
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+#    Line 2: immediate fix — makes brew available right now without restarting
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# 4. Install Ansible
+brew install ansible
+
+# 5. Run bootstrap — clones repo and sets everything up automatically
 curl -fsSL https://raw.githubusercontent.com/maharabhossain1/dotfiles/main/bootstrap.sh | bash
 ```
 
