@@ -50,6 +50,3 @@
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
 
-- name: Set zsh as default shell
-  shell: chsh -s /bin/zsh {{ ansible_env.USER }}
-  changed_when: false
