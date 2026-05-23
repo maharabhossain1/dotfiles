@@ -12,19 +12,8 @@ xcode-select --install
 # Verify it finished
 git --version  # should print a version number
 
-# 2. Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# 3. Add Homebrew to PATH (run both lines — Homebrew will remind you at the end too)
-#    Line 1: permanent fix — adds brew to PATH on every terminal launch
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-#    Line 2: immediate fix — makes brew available right now without restarting
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# 4. Install Ansible
-brew install ansible
-
-# 5. Run bootstrap — clones repo and sets everything up automatically
+# 2. Run bootstrap — handles everything else automatically
+#    (Homebrew, Ansible, all packages, all configs, all symlinks)
 curl -fsSL https://raw.githubusercontent.com/maharabhossain1/dotfiles/main/bootstrap.sh | bash
 ```
 
