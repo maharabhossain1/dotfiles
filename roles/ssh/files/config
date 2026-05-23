@@ -1,4 +1,4 @@
- Host *
+Host *
     ServerAliveInterval 60
     ServerAliveCountMax 3
     ControlMaster auto
@@ -6,6 +6,7 @@
     ControlPersist 10m
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_ed25519
+    SetEnv TERM=xterm-256color
 
 Host gtaf-staging
   Hostname 137.184.250.109
