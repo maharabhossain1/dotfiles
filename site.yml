@@ -1,0 +1,14 @@
+---
+- name: Setup dotfiles
+  hosts: local
+  vars_files:
+    - group_vars/all.yml
+
+  roles:
+    - homebrew
+    - git
+    - zsh
+    - tmux
+    - nvim
+    - ghostty
+    - ssh

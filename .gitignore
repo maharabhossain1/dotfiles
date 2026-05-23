@@ -1,0 +1,15 @@
+# Ansible
+*.retry
+
+# Secrets — never commit these
+roles/ssh/files/id_*
+roles/ssh/files/known_hosts*
+*.pem
+*.key
+
+# macOS
+.DS_Store
+
+# Local machine overrides
+host_vars/
+.env

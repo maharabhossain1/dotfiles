@@ -1,0 +1,26 @@
+ Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    ControlMaster auto
+    ControlPath ~/.ssh/sockets/%r@%h:%p
+    ControlPersist 10m
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_ed25519
+
+Host gtaf-staging
+  Hostname 137.184.250.109
+  User gtaf
+
+Host gtaf-prod
+  Hostname 188.166.198.197
+  User gtaf
+
+Host gtaf-prod-worker
+  Hostname 139.59.244.206
+  User gtaf
+
+Host gtal-staging
+  Hostname 57.155.74.72
+  User azureuser
+
+

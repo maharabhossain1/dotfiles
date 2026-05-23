@@ -1,0 +1,36 @@
+[user]
+	name = {{ git_user_name }}
+	email = {{ git_user_email }}
+
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	pager = delta
+
+[init]
+	defaultBranch = {{ git_default_branch }}
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[pull]
+	rebase = false
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[delta]
+	navigate = true
+	light = false
+	side-by-side = true
+	line-numbers = true
+
+[alias]
+	lg = log --oneline --graph --decorate --all
+	undo = reset --soft HEAD~1
+	pushf = push --force-with-lease

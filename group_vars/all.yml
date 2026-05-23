@@ -1,0 +1,14 @@
+---
+# Shared across all machines — override in host_vars/<hostname>.yml
+
+dotfiles_dir: "{{ ansible_env.HOME }}/.dotfiles"
+
+git_user_name: "Maharab Hossain Opi"
+git_user_email: "maharabhossain0022@gmail.com"
+git_default_branch: "main"
+
+# oh-my-zsh plugins to install
+omz_plugins:
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
+  - zsh-completions
