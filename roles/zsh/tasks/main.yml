@@ -3,44 +3,44 @@
   shell: |
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
-    creates: "{{ ansible_facts["env"]["HOME"] }}/.oh-my-zsh"
+    creates: "{{ ansible_facts['env']['HOME'] }}/.oh-my-zsh"
 
 - name: Install Powerlevel10k theme
   git:
     repo: https://github.com/romkatv/powerlevel10k.git
-    dest: "{{ ansible_facts["env"]["HOME"] }}/.oh-my-zsh/custom/themes/powerlevel10k"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.oh-my-zsh/custom/themes/powerlevel10k"
     depth: 1
     update: yes
 
 - name: Install zsh-autosuggestions
   git:
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
-    dest: "{{ ansible_facts["env"]["HOME"] }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
     update: yes
 
 - name: Install zsh-syntax-highlighting
   git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-    dest: "{{ ansible_facts["env"]["HOME"] }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
     update: yes
 
 - name: Install zsh-completions
   git:
     repo: https://github.com/zsh-users/zsh-completions.git
-    dest: "{{ ansible_facts["env"]["HOME"] }}/.oh-my-zsh/custom/plugins/zsh-completions"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.oh-my-zsh/custom/plugins/zsh-completions"
     update: yes
 
 - name: Symlink .zshrc
   file:
     src: "{{ dotfiles_dir }}/roles/zsh/files/.zshrc"
-    dest: "{{ ansible_facts["env"]["HOME"] }}/.zshrc"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
     state: link
     force: yes
 
 - name: Symlink .p10k.zsh
   file:
     src: "{{ dotfiles_dir }}/roles/zsh/files/.p10k.zsh"
-    dest: "{{ ansible_facts["env"]["HOME"] }}/.p10k.zsh"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.p10k.zsh"
     state: link
     force: yes
 
@@ -48,5 +48,5 @@
   shell: |
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
   args:
-    creates: "{{ ansible_facts["env"]["HOME"] }}/.nvm/nvm.sh"
+    creates: "{{ ansible_facts['env']['HOME'] }}/.nvm/nvm.sh"
 

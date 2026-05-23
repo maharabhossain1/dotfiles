@@ -13,7 +13,7 @@
   community.general.homebrew:
     path: /opt/homebrew/bin
     update_homebrew: true
-  when: ansible_facts["os_family"] == "Darwin"
+  when: ansible_facts['os_family'] == "Darwin"
 
 - name: Run brew bundle
   command: brew bundle --file={{ dotfiles_dir }}/Brewfile
