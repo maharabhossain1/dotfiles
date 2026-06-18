@@ -19,6 +19,8 @@ curl -fsSL https://raw.githubusercontent.com/maharabhossain1/dotfiles/main/boots
 
 ## Existing machine — pull and apply updates
 
+Before pulling updates, make sure your git identity is persisted in `host_vars/<your-hostname>.yml` (see below) — otherwise `ansible-playbook` will overwrite your `.gitconfig` with the placeholder defaults.
+
 ```bash
 cd ~/.dotfiles
 git pull
@@ -27,13 +29,12 @@ ansible-playbook site.yml
 
 ## Machine-specific overrides
 
-Create `~/.dotfiles.local` (gitignored) and source it in your shell.  
-Or create `host_vars/<your-hostname>.yml` (also gitignored) to override any variable:
+Bootstrap prompts for your git name and email on a fresh install. For subsequent `ansible-playbook` runs you must persist your identity in `host_vars/<your-hostname>.yml` (gitignored), otherwise the playbook overwrites `.gitconfig` with placeholders:
 
 ```yaml
 # host_vars/work-macbook.yml
-git_user_email: "you@company.com"
-git_user_name: "Your Work Name"
+git_user_name: "Your Name"
+git_user_email: "you@example.com"
 ```
 
 ## What's managed

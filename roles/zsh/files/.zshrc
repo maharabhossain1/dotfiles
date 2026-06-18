@@ -39,6 +39,7 @@ setopt HIST_IGNORE_SPACE
 # ---- AUTOSUGGEST ----
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste)
 
 # ---- COMPLETION ----
 zstyle ':completion:*' menu select
