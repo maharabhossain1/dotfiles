@@ -20,11 +20,6 @@
   changed_when: false
   when: ansible_facts['os_family'] == "Darwin"
 
-- name: Upgrade existing Homebrew packages
-  command: brew upgrade
-  changed_when: false
-  when: ansible_facts['os_family'] == "Darwin"
-
 - name: Run brew bundle
   command: brew bundle --file={{ dotfiles_dir }}/Brewfile --no-upgrade
   changed_when: false
