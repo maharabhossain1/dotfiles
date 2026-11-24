@@ -25,3 +25,7 @@ Host gtal-staging
   User azureuser
 
 
+Host rnd-server
+  Hostname 65.2.126.204
+  User ubuntu
+
